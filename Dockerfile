@@ -1,5 +1,5 @@
 # https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/
-FROM dorowu/ubuntu-desktop-lxde-vnc:bionic
+FROM dorowu/ubuntu-desktop-lxde-vnc:focal
 
 # install packages
 RUN apt-get update && \
@@ -9,8 +9,8 @@ RUN apt-get update && \
     sudo apt-get install curl \
     curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash \
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash \
-    nvm install 16.14.2
-    nvm use 16.14.2
+    nvm install 16.14.2 \
+    nvm use 16.14.2 \
     sudo apt-get install speedtest \
     dirmngr \
     gnupg2 \
