@@ -1,4 +1,4 @@
-FROM ubuntu:focal-lxqt as ubuntu-base
+FROM ubuntu:latest as ubuntu-base
 
 ENV DEBIAN_FRONTEND=noninteractive \
     DEBCONF_NONINTERACTIVE_SEEN=true
