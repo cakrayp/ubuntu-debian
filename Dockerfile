@@ -2,14 +2,14 @@
 FROM dorowu/ubuntu-desktop-lxde-vnc:focal
 
 # install packages
-RUN apt-get update && \
-    apt-get install -q -y \
-    apt-get install git \
-    apt-get install build-essential libssl-dev \
-    sudo apt-get install curl \
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash \
-    nvm install 16.14.2 \
-    nvm use 16.14.2 \
+RUN apt-get update \
+    && apt-get install -q -y \
+    && apt-get install git \
+    && apt-get install build-essential libssl-dev \
+    && sudo apt-get install curl \
+    && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash \
+    && nvm install 16.14.2 \
+    && nvm use 16.14.2 \
     dirmngr \
     gnupg2 \
     lsb-release \
