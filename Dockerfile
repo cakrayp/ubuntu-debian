@@ -62,7 +62,6 @@ FROM ubuntu-utilities as ubuntu-ui
 ENV VNC_PASSWORD=ubuntu342
 ENV PASSWORD=${VNC_PASSWORD}
 
-FROM ubuntu-utilities as ubuntu-ui
 ENV SCREEN_WIDTH=1280 \
     SCREEN_HEIGHT=720 \
     SCREEN_DEPTH=24 \
