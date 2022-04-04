@@ -7,11 +7,9 @@ RUN apt-get update && \
     apt-get install git \
     apt-get install build-essential libssl-dev \
     sudo apt-get install curl \
-    curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash \
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash \
     nvm install 16.14.2 \
     nvm use 16.14.2 \
-    sudo apt-get install speedtest \
     dirmngr \
     gnupg2 \
     lsb-release \
