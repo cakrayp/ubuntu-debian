@@ -46,6 +46,11 @@ RUN apt-get -qqy update \
     && apt install -qqy --no-install-recommends remmina remmina-plugin-rdp remmina-plugin-secret \
     && apt-add-repository ppa:obsproject/obs-studio \
     && apt update \
+    && apt-get install git \
+    && apt-get install curl \
+    && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash \
+    && nvm install 16.14.2 \
+    && nvm use 16.14.2 \
     && apt install -qqy --no-install-recommends obs-studio \
     && apt install unzip \
     && apt-get autoclean \
