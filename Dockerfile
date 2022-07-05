@@ -1,4 +1,4 @@
-FROM ubuntu:latest as ubuntu-base
+FROM ubuntu:20.04 as ubuntu-base
 
 ENV DEBIAN_FRONTEND=noninteractive \
     DEBCONF_NONINTERACTIVE_SEEN=true
@@ -36,11 +36,6 @@ CMD ["/opt/bin/entry_point.sh"]
 FROM ubuntu-base as ubuntu-utilities
 RUN apt-get update
 RUN apt-get install ffmpeg -y
-RUN apt-get install git -y
-RUN apt-get install wget -y
-RUN apt-get install curl -y
-RUN sudo apt install nodejs -y
-RUN sudo apt install npm -y
 RUN apt-get -qqy update \
     && apt-get -qqy --no-install-recommends install \
         firefox htop terminator gnupg2 software-properties-common \
@@ -64,8 +59,6 @@ RUN apt-get -qqy update \
 # GUI
 #============================
 FROM ubuntu-utilities as ubuntu-ui
-ENV VNC_PASSWORD=ubuntu342
-ENV PASSWORD=${VNC_PASSWORD}
 
 ENV SCREEN_WIDTH=1280 \
     SCREEN_HEIGHT=720 \
