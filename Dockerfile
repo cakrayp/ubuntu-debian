@@ -6,9 +6,6 @@ RUN apt-get update && apt upgrade -y \
     && apt-get install git -y \
     && apt-get install build-essential libssl-dev -y \
     && apt-get install curl -y \
-    && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash \
-    && nvm install 16.14.2 \
-    && nvm use 16.14.2 \
     dirmngr \
     gnupg2 \
     lsb-release \
@@ -18,6 +15,8 @@ RUN apt-get update && apt upgrade -y \
     ssh \
     tmux \
     screen
+    
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
 
 # Getting supervisorD to look after ssh
 RUN echo "[program:sshd]" >> /etc/supervisor/conf.d/supervisord.conf
