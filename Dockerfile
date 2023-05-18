@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:latest as ubuntu-base
 
 # install packages
 RUN apt-get update && apt upgrade -y \
@@ -6,6 +6,7 @@ RUN apt-get update && apt upgrade -y \
     && apt-get install git -y \
     && apt-get install build-essential libssl-dev -y \
     && apt-get install curl -y \
+    supervisor \
     dirmngr \
     gnupg2 \
     lsb-release \
