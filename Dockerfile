@@ -5,7 +5,7 @@ RUN apt-get update && apt upgrade -y \
     && apt-get install -q -y \
     && apt-get install git -y \
     && apt-get install build-essential libssl-dev -y \
-    && sudo apt-get install curl -y \
+    && apt-get install curl -y \
     && curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash \
     && nvm install 16.14.2 \
     && nvm use 16.14.2 \
