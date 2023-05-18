@@ -1,3 +1,5 @@
+FROM ubuntu:latest
+
 # install packages
 RUN apt-get update \
     && apt-get install -q -y \
